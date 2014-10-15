@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main_control.js"></script>
+  </head>
+  <body ng-app="mb-timer" ng-controller="MainCtrl">
+    <div class="bar bar-header bar-dark">
+      <h1 class="title">TimeR</h1>
+    </div>
+    <ion-content ng-controller="MainCtrl" class="has-header">
+      <div class="row">
+        <div class="col">
+          <div class="range"><i class="ion-clock"></i>
+            <input type="range" ng-model="clock" min="0" max="500">
+          </div>
+        </div>
+      </div>
+      <button ng-click="start()" class="button-full button-dark">Start</button>
+      <div class="clock">{{clock}} s</div>
+    </ion-content>
+  </body>
+</html>
